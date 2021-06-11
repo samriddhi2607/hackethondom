@@ -16,7 +16,7 @@ let refeshbutton = document.querySelector(".refresh");
 
 backbutton.addEventListener("click", function()
 {
-    window.location.assign("store.html");
+    window.location.assign("index.html");
 });
 
 refeshbutton.addEventListener("click", function()

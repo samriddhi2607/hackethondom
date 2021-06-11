@@ -574,7 +574,7 @@ document.querySelector(".image").style.zIndex='-1';
           pagediv.remove();
 
           if(pagename=="donation")
-          window.location.assign("index.html");
+          window.location.assign("donation.html");
           else if(pagename=="reviews")
           window.location.assign("reveiws.html");
           else if(pagename=="faq")

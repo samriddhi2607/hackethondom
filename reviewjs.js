@@ -321,7 +321,7 @@ function appendtoreview(un , item , text , reviewurl)
 // for back , refresh and delete.
 backbutton.addEventListener("click", function()
 {
-    window.location.assign("store.html");
+    window.location.assign("index.html");
 });
 
 refeshbutton.addEventListener("click", function()
