@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FAQ</title>
+</head>
+<style>
+    *
+    {
+        box-sizing: border-box;
+        margin:0px;
+        padding:0px;
+        font-family: 'Asul', sans-serif;
+    }
+    .heading
+    {
+    height: 100px;
+    width:100%;
+    background:#b4846c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:#deeeea;
+    font-size: 5rem;
+    box-shadow: 2px 2px 2px 2px #343a40;
+    }
+    .back
+    {
+        font-size: 3rem;
+        color : #deeeea;
+        
+    }
+    .back:hover{
+        transform:scale(1.2);
+        box-shadow: 2px 2px 2px 2px#343a40;
+    }
+    .faq-content
+    {
+        min-height: 95vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff5fd;
+    }
+    .question-text
+    { 
+    height:fit-content;
+    width:100%;
+    margin: 10px;
+    background:#e5b299;
+    box-shadow: 2px 2px 2px 2px#343a40;
+    display: flexbox;
+   
+    }
+    .question-text>p
+    {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.5rem;
+    font-weight:bold;
+    }
+    .add-button
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        padding:20px;
+    }
+    .add-button:hover
+    {
+        color:#7d5a50;
+    }
+    .question-ans>p
+    {
+    padding: 4px;
+    text-transform: capitalize ;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight:550;
+    text-align:center;
+
+    } 
+    .hide
+    {
+        display:none;
+    }
+</style>
+
+<body>
+    <div class="heading">
+        Frequently Asked Questions !!
+        <div class="back">
+            <i class="fas fa-backward"></i>
+        </div>
+    </div>
+
+    <div class="faq-content">
+        <div class="question-text">
+            <p> How DO WE USE THE DONATION SITE</p>
+            <div class="add-button">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="question-ans hide">
+                <p> Navigate to the donation page , you will see three days.
+                    choose a day and add your donation . Remember that when a user drag or drop 
+                    the donation in completed section then only the donation will be considered as completed.
+                </p>
+            </div>
+        </div>
+
+        <div class="question-text">
+            <p> How DO YOU CHECK WHETHER THE CORRECT USER HAS ONLY DRAGGED THE DONATION?</p>
+            <div class="add-button">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="question-ans hide">
+                <p> We trust our customers .Donation is a noble work .We sincerely hope that no one will drag someone else 
+                    donation in the completed box . Moreover once the monday donations are completed then only the result of the days are open for dragging.
+                    Hence be aware of that . Its not for fun.
+                </p>
+            </div>
+        </div>
+
+        <div class="question-text">
+            <p> WHAT IS THE DONATION (MONEY)?</p>
+            <div class="add-button">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="question-ans hide">
+                <p> We dont beileve in any money donation . You can either donate food or donate cloths . Food can be the food items we provide in our store.
+                    If you donate them then you will get discount on whatever you buy next. Morever if you see that the donations on one day are more than what can be completed . Then you can contact 
+                    us anytime .
+                </p>
+            </div>
+        </div>
+
+        <div class="question-text">
+            <p> WHERE CAN WE CONTACT YOU ?</p>
+            <div class="add-button">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="question-ans hide">
+                <p> To contact us on our email id mystore@gmail.com or contact on our given store number +91 27185095.
+                    We are always happy to help .
+                </p>
+            </div>
+        </div>
+
+        <div class="question-text">
+            <p> WHAT ABOUT YOUR REVIEWS AND RECEPIES PAGE?</p>
+            <div class="add-button">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="question-ans hide">
+                <p> 
+                    It is a fun page where user can give us their reviews and share with us there receipes. Even if after someone 
+                    time they find that they want to delete there review and receipe they are free to do that . But they just need to remeber the 
+                    id they are given because thats there password .
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+            //for the adding at the add button .
+            let add = document.querySelectorAll(".add-button");
+            let answer = document.querySelectorAll(".question-ans");
+            console.log(answer);
+            console.log(add);
+
+            for(let i =0 ; i<add.length ; i++)
+            {
+                let clickbutton = add[i];
+                clickbutton.addEventListener("click" , function()
+                {
+                     answer[i].classList.contains("hide") ? answer[i].classList.remove("hide"):
+                     answer[i].classList.add("hide");
+                })
+            }
+
+            // for going back .
+            let backbutton = document.querySelector(".back");
+            backbutton.addEventListener("click", function()
+            {
+                window.location.assign("store.html");
+            });
+
+    </script>
+</body>
+</html>

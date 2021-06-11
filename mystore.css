@@ -1,0 +1,241 @@
+*
+{
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+}
+.dummy{
+    height:100%;
+    width:100%;
+   z-index:100;
+}
+.heading{
+    height:90px;
+    width:100%;
+    position:fixed;
+    top:0px;
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(214, 8, 77);
+    z-index:10 ;
+}
+.logo{
+    position: relative;
+    left:150px;
+    height:inherit;
+    width:200px;
+    font-size:2.4rem; 
+    text-align: center;
+    color:white;
+    font-weight:bold;
+    padding-top:20px;
+}
+.search
+{
+    position: absolute;
+    right:100px;
+    height: inherit;
+    width: 600px;
+    padding: auto;
+    text-align: center;
+    
+}
+.input-box
+{
+    display: block;
+    margin:22px auto;
+    outline: none;
+    height:45px;
+    width:90%;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 1px;
+    border: none;
+}
+
+.main-content
+{
+position:relative;
+top:90px;
+display:flex;
+flex-direction:row;
+}
+.navbar
+{
+    top:150px;
+    height:410px;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    position:sticky;
+    left:0px!important;
+}
+.tool
+{
+    border:4px solid rgb(255, 0, 85);
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
+    margin: 10px;
+
+}
+.tool>img
+{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius:50%;
+}
+.tool>img:hover
+{
+    transform:scale(1.2);
+}
+.buttons
+{
+    width:1420px;
+    min-height: 100vh;
+   padding-bottom: 100px;
+
+   
+}
+.control
+{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  list-style: none;
+
+}
+.button
+{
+    height: 26px;
+    width: 140px;
+    background: #D6A2E8;
+    color: black;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 2px 2px 5px 1px #d6a2e8;
+    text-align: center;
+    border-radius: 10px;
+}
+.button:hover
+{
+    transform:scale(1.2);
+}
+.mycontent
+{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.image
+{
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    border: 15px solid #D6A2E8;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.image img
+{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+}
+.image img:hover
+{
+    /*transform:scale(2);*/
+    animation: rotate 1s;
+}
+.bill
+{
+    position: absolute;
+    border: 2px solid;
+    height: 60vh;
+    width: 40vw;
+    margin: auto;
+    top: 100px;
+    left: 30%;
+    background: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+
+}
+.item-name
+{
+padding: 10px;
+margin: 10px;
+border: 1px solid;
+}
+.item-price
+{
+margin: 10px;
+}
+.total-amount
+{
+
+margin: 20px;
+border: 1px solid;
+padding: 10px;
+}
+.submit
+{
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid;
+    border-radius: 70px;
+    width: 20vw;
+    background: darkgrey;
+    margin: auto;
+}
+.popup
+{
+    position: absolute;
+    border: 2px solid;
+    height: 60vh;
+    width: 40vw;
+    margin: auto;
+    top: 100px;
+    left: 30%;
+    background: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.popup p
+{
+    word-break: break-word;
+    font-size: 1.6rem;
+    padding: 10px;
+    margin: 10px;
+    color: rebeccapurple;
+}
+
+@keyframes rotate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        /*transform: rotate(180deg);*/
+        transform:scale(2);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

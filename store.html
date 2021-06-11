@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="mystore.css">
+</head>
+<body>
+    <div class="dummy">
+            <div class="heading">
+        <div class="logo">My Store</div>
+        <div class="search">
+            <input type="text" placeholder="Enter a Search" class ="input-box">
+        </div>
+    </div>
+    
+<div class="main-content">
+    <div class="navbar">
+        <div id="reviews" class="tool">
+            <img src="./icons/review.png" alt="">
+        </div>
+        <div class="tool" id="donation">
+            <img src="./icons/donation.png" alt="">
+        </div>
+        <div class="tool" id="mybill">
+            <img src="./icons/bill.png" alt="" >
+        </div>
+        <div class="tool" id="faq">
+            <img src="./icons/faq.png" alt="">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <ul class="control">
+            <li class="button active" data-filter="all">ALL</li>
+            <li class="button" data-filter="cake">CAKES</li>
+            <li class="button" data-filter="cupcake">CUPCAKES</li>
+            <li class="button" data-filter="candy">CANDIES</li>
+            <li class="button" data-filter="sandwich">SANDWICHES</li>
+            <li class="button" data-filter="milkshake">MILKSHAKES</li>
+        </ul>
+       
+        <div class="mycontent">
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<script src="makeme.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $('.button').click(function()
+        {
+            $(this).addClass('active').siblings().removeClass('active');
+
+            var filter = $(this).attr('data-filter');
+
+            if(filter == 'all')
+            {
+            $('.image ').show(400);
+            }
+            else
+            {
+                $('.image ').not('.'+filter).hide(200);
+                $('.image ').filter('.'+filter).show(400);
+            }
+
+
+        });
+    });
+</script>
+
+<script src="storescript.js" ></script>
+    </body>
+</html>
